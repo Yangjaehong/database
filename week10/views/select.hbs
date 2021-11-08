@@ -1,0 +1,29 @@
+<h1>{{ title }}</h1> {{!-- select화면에서 보이게될 것들 title은 앞에서 지정 해 주었음 --}}
+<table>
+    <tr>
+        <td>Dname</td>
+        <td>Dnumber</td>
+    </tr>
+    {{#each department}} {{!-- department를 이용함 --}}
+    <tr>
+        <td>{{Dname}}</td>
+        <td>{{Dnumber}}</td> {{!-- 각각 talbe의 내용들을 불러옴 --}}
+    </tr>
+    {{/each}}
+</table>
+
+<h1>{{ title2 }}</h1>
+<table>
+    <tr>
+        <td>studentID</td> {{!-- 각각의 이름들 --}}
+        <td>studentName</td> 
+        <td>Dnum</td>
+    </tr>
+    {{#each student}} {{!-- student를 이용 --}}
+    <tr>
+        <td>{{Studentid}}</td>
+        <td>{{Studentname}}</td>
+        <td>{{Dnum}}</td>
+    </tr>
+    {{/each}}
+</table>

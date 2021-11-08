@@ -1,0 +1,28 @@
+<h1>{{ title2 }}</h1>
+<table>
+    <tr>
+        <td>studentID</td>
+        <td>studentName</td>
+        <td>Dnum</td>
+    </tr>
+    {{#each student}}
+        <form method="post">
+            <tr>
+                <td>{{Studentid}}</td>
+                <td>{{Studentname}}</td>
+                <td>{{Dnum}}</td>
+                <td style="border: none; margin-left: 10px;">
+                    <button {{!-- 버튼을 다음과 같이 설정해줌 department와 버튼 이름은 다르게 지정함 --}}
+                        style="margin-left: 10px;"
+                        name='delBtn1'
+                        type="submit"
+                        value="{{Studentid}}"
+                        formaction="/delete/student">
+                        삭제
+                    </button>
+                </td>
+            </tr>
+        </form>
+    {{/each}}
+</table>
+
