@@ -1,0 +1,34 @@
+<h1>조회</h1> 
+<table>
+    <tr>
+        <td>Name</td>
+        <td>City</td>
+        <td>Airport_code</td>
+
+    </tr>
+    {{#each airport}} 
+    <tr>
+        <td>{{Name}}</td> 
+        <td>{{City}}</td>
+        <td>{{Airport_code}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h2>Airport_code를 입력하고, 변경할 이름을 입력하시오.</h2>
+
+<form name="Airport" method="post" action='/update/Airport'>
+    <div>
+        <label for="airport_code">Airport_code</label>
+        <input id="airport_code" name="airport_code" type="text" required placeholder="Airport_code">
+    </div>
+    
+    <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required placeholder="Name">
+    </div>
+    
+    <div>
+        <input type="submit" value="수정">
+    </div>
+</form>

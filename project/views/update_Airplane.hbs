@@ -1,0 +1,33 @@
+<h1>조회</h1> 
+<table>
+    <tr>
+        <td>Airplane_id</td>
+        <td>Total_number_of_seats</td>
+        <td>Airplane_type</td>
+
+    </tr>
+    {{#each airplane}} 
+    <tr>
+        <td>{{Airplane_id}}</td> 
+        <td>{{Total_number_of_seats}}</td>
+        <td>{{Airplane_type}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h2>Airplane_id를 입력하고, 변경할 Total_number_of_seats를 입력하시오.</h2>
+<form name="Airplane" method="post" action='/update/Airplane'>
+    <div>
+        <label for="airplane_id">Airplane_id</label>
+        <input id="airplane_id" name="airplane_id" type="text" required placeholder="Airplane_id">
+    </div>
+    
+    <div>
+        <label for="total_number_of_seats">Total_number_of_seats</label>
+        <input id="total_number_of_seats" name="total_number_of_seats" type="text" required placeholder="Total_number_of_seats">
+    </div>
+    
+    <div>
+        <input type="submit" value="수정">
+    </div>
+</form>

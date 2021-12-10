@@ -1,0 +1,37 @@
+<h1>예약정보</h1> 
+<table>
+    <tr>
+        <td>Date</td>
+        <td>Leg_number</td>
+        <td>User_User_id</td>
+        <td>Seat_number</td>
+    </tr>
+    {{#each Seat}} 
+    <tr>
+                <td>{{Date}}</td>
+                <td>{{Leg_number}}</td>
+                <td>{{User_User_id}}</td>
+                <td>{{Seat_number}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h2>삭제할 구간의 Leg_number와 Date와 User_id를 입력하시오.</h2>
+<form name="Seat_reservation" method="post" action='/delete/Seat_reservation'>
+    <div>
+        <label for="date">Date</label>
+        <input id="date" name="date" type="text" required placeholder="Date">
+    </div>
+    <div>
+        <label for="leg_number">Leg_number</label>
+        <input id="leg_number" name="leg_number" type="text" required placeholder="Leg_number">
+    </div>
+     <div>
+        <label for="user_User_id">User_User_id</label>
+        <input id="user_User_id" name="user_User_id" type="text" required placeholder="User_User_id">
+    </div>
+    
+    <div>
+        <input type="submit" value="삭제">
+    </div>
+</form>

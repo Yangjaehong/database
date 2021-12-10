@@ -1,0 +1,53 @@
+
+<h1>예약 가능한 항공편</h1> 
+<table>
+    <tr>
+        <td>Leg_number</td>
+        <td>Airline</td>
+        <td>Date</td>
+        <td>Amount</td>
+        <td>available_seat</td>
+        <td>departure_airport_name</td>
+        <td>departure_time</td>
+        <td>arrival_airport_name</td>
+        <td>arrival_time</td>
+    </tr>
+    {{#each view}} 
+    <tr>
+        <td>{{leg_number}}</td> 
+        <td>{{airline}}</td>
+        <td>{{date}}</td>
+        <td>{{amount}}</td>
+        <td>{{number_of_available_seat}}</td> 
+        <td>{{departure_airport_name}}</td>
+        <td>{{departure_time}}</td>
+        <td>{{arrival_airport_name}}</td>
+        <td>{{arrival_time}}</td>
+    </tr>
+    {{/each}}
+</table>
+</br> </br>
+
+<h1>예약하기</h1>
+
+<form name="Seat_reservation" method="post" action='/insert/Seat_reservation'>
+    <div>
+        <label for="date">Date</label>
+        <input id="date" name="date" type="text" required placeholder="Date">
+    </div>
+    <div>
+        <label for="leg_number">Leg_number</label>
+        <input id="leg_number" name="leg_number" type="text" required placeholder="Leg_number">
+    </div>
+    <div>
+        <label for="user_User_id">User_User_id</label>
+        <input id="user_User_id" name="user_User_id" type="text" required placeholder="User_User_id">
+    </div>
+     <div>
+        <label for="seat_number">Seat_number</label>
+        <input id="seat_number" name="seat_number" type="text" required placeholder="Seat_number">
+    </div>
+    <div>
+        <input type="submit" value="삽입">
+    </div>
+</form>

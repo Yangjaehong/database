@@ -1,0 +1,52 @@
+<h1>공항 정보</h1> 
+<table>
+    <tr>
+        <td>Name</td>
+        <td>City</td>
+        <td>Airport_code</td>
+    </tr>
+    {{#each airport}} 
+    <tr>
+        <td>{{Name}}</td> 
+        <td>{{City}}</td>
+        <td>{{Airport_code}}</td>
+    </tr>
+    {{/each}}
+</table>
+</br> </br>
+
+<h1>항공기 정보</h1> 
+<table>
+    <tr>
+        <td>Airplane_id</td>
+        <td>Total_number_of_seats</td>
+        <td>Airplane_type</td>
+    </tr>
+    {{#each airplane}} 
+    <tr>
+        <td>{{Airplane_id}}</td> 
+        <td>{{Total_number_of_seats}}</td>
+        <td>{{Airplane_type}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h1>구간 정보</h1> 
+<table>
+    <tr>
+        <td>Leg_number</td>
+        <td>Date</td>
+        <td>Number_of_available_seat</td>
+        <td>Airplane_id</td>
+    </tr>
+    {{#each leg_instance}} 
+    <tr>
+        <td>{{Leg_number}}</td> 
+        <td>{{Date}}</td>
+        <td>{{Number_of_available_seat}}</td>
+        <td>{{Airplane_id}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+

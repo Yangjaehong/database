@@ -1,0 +1,35 @@
+
+<h1>{{ title4 }}</h1> 
+<table>
+    <tr>
+        <td>Leg_number</td>
+        <td>Date</td>
+        <td>Number_of_available_seat</td>
+        <td>Airplane_id</td>
+    </tr>
+    {{#each leg_instance}} 
+    <tr>
+                <td>{{Leg_number}}</td>
+                <td>{{Date}}</td>
+                <td>{{Number_of_available_seat}}</td>
+                <td>{{Airplane_id}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h2>삭제할 구간의 Leg_number와 Date를 입력하시오</h2>
+<form name="Leg_instance" method="post" action='/delete/Leg_instance'>
+    <div>
+        <label for="leg_number">Leg_number</label>
+        <input id="leg_number" name="leg_number" type="text" required placeholder="Leg_number">
+    </div>
+    
+    <div>
+        <label for="date">Date</label>
+        <input id="date" name="date" type="text" required placeholder="Date">
+    </div>
+    
+    <div>
+        <input type="submit" value="삭제">
+    </div>
+</form>
