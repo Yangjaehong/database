@@ -1,0 +1,15 @@
+<h1>{{ title }}</h1> 
+<table>
+    <tr>
+        <td>userID</td>
+        <td>userPassword</td>
+        
+    </tr>
+    {{#each user}} 
+    <tr>
+        <td>{{userID}}</td> 
+        <td>{{userPassword}}</td>
+    </tr>
+    {{/each}}
+</table>
+
